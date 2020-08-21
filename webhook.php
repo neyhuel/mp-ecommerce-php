@@ -17,6 +17,6 @@ use Monolog\Handler\StreamHandler;
 $log = new Logger('name');
 $log->pushHandler(new StreamHandler('php://stderr', Logger::WARNING));
 
-$log->addWarning(print_r($info));
+$log->warning(print_r($info));
 
 ?>
