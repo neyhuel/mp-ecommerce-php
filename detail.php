@@ -1,4 +1,7 @@
 <?php
+
+try {
+
   // SDK de Mercado Pago
   require __DIR__ .  '/vendor/autoload.php';
 
@@ -54,6 +57,9 @@
   $preference->external_reference = 'nahue.martinez1987@gmail.com';
   $preference->collector_id = 469485398;
   $preference->save();
+}catch (Exception $e){
+    echo ($e);
+}
 ?>
 
 
@@ -183,10 +189,10 @@
                                             </h3>
                                         </div>
                                         <h3 >
-                                            <?php echo "$" . $_POST['price'] ?>
+                                            Precio: <?php echo "$" . $_POST['price'] ?>
                                         </h3>
                                         <h3 >
-                                            <?php echo $_POST['unit'] ?>
+                                            Cantidad: <?php echo $_POST['unit'] ?>
                                         </h3>
                                     </div>
                                     <form action="/procesar-pago" method="POST">
