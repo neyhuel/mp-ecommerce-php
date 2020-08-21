@@ -1,3 +1,3 @@
 <?php
-print_r(scandir('/', 1));
+print_r(scandir('/app', 1));
 ?>
