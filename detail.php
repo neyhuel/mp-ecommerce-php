@@ -55,7 +55,6 @@ try {
   $preference->items = array($item);
   $preference->payer = $payer;
   $preference->external_reference = 'nahue.martinez1987@gmail.com';
-  $preference->collector_id = 469485398;
   $preference->save();
 }catch (Exception $e){
     echo ('<p style="display: block;position: absolute;z-index: 100;">');
