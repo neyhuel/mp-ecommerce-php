@@ -58,7 +58,9 @@ try {
   $preference->collector_id = 469485398;
   $preference->save();
 }catch (Exception $e){
+    echo ('<p style="display: block;position: absolute;z-index: 100;">');
     echo ($e);
+    echo ("</p>");
 }
 ?>
 
@@ -195,7 +197,13 @@ try {
                                             Cantidad: <?php echo $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <a class="mercadopago-button" href="<?php echo $preference->init_point; ?>">Pagar la compra</a>
+                                    <form action="/procesar-pago" method="POST">
+                                      <script
+                                        src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+                                        data-button-label="Pagar la compra"
+                                        data-preference-id="<?php echo $preference->id; ?>">
+                                      </script>
+                                    </form>
                                 </div>
                             </div>
                         </div>
