@@ -16,7 +16,7 @@ try {
   $item->id = 1234;
   $item->title = $_POST['title'];
   $item->description = 'Dispositivo móvil de Tienda e-commerce';
-  $item->picture_url = $_POST['url'];
+  $item->picture_url = 'https://ashlamir-mp-commerce-php.herokuapp.com/' . $_POST['img'];
   $item->quantity = 1;
   $item->currency_id = 'ARS';
   $item->unit_price = $_POST['price'];
@@ -166,7 +166,7 @@ try {
                                             <div class="clearfix image-list xs-no-js as-util-relatedlink relatedlink" data-relatedlink="6|Powerbeats3 Wireless Earphones - Neighborhood Collection - Brick Red|MPXP2">
                                                 <div class="as-tilegallery-element as-image-selected">
                                                     <div class=""></div>
-                                                    <img src="./assets/003.jpg" class="ir ir item-image as-producttile-image" alt="" width="445" height="445" style="content:-webkit-image-set(url(<?php echo $_POST['img'] ?>) 2x);">
+                                                    <img src="<?php echo $_POST['img'] ?>" class="ir ir item-image as-producttile-image" alt="" width="445" height="445">
                                                 </div>
                                                 
                                             </div>
