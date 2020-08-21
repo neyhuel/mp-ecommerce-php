@@ -8,4 +8,6 @@ ini_set('display_errors',1);
 $info = file_get_contents('php://input');
 print_r($info);
 error_log(print_r($info));
+file_put_contents("php://stderr", print_r($info));
+
 ?>
