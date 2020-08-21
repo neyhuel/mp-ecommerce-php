@@ -51,6 +51,17 @@ try {
   );
   $preference->auto_return = "approved";
 
+  // Payments
+  $preference->payment_methods = array(
+      "excluded_payment_methods" => array(
+          array("id" => "amex")
+      ),
+      "excluded_payment_types" => array(
+          array("id" => "atm")
+      ),
+      "installments" => 6
+  );
+
   // Completando el objeto preference
   $preference->items = array($item);
   $preference->payer = $payer;
@@ -82,8 +93,10 @@ try {
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
+    <script src="https://www.mercadopago.com/v2/security.js" view="detail"></script>
 
-    <link rel="stylesheet" href="./assets/category-landing.css" media="screen, print">
+
+  <link rel="stylesheet" href="./assets/category-landing.css" media="screen, print">
 
     <link rel="stylesheet" href="./assets/category.css" media="screen, print">
 
