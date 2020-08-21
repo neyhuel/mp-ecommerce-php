@@ -55,6 +55,7 @@ try {
   $preference->items = array($item);
   $preference->payer = $payer;
   $preference->external_reference = 'nahue.martinez1987@gmail.com';
+  $preference->notification_url = 'https://ashlamir-mp-commerce-php.herokuapp.com/webhook.php';
   $preference->save();
 }catch (Exception $e){
     echo ('<p style="display: block;position: absolute;z-index: 100;">');
