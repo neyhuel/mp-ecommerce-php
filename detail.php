@@ -16,7 +16,7 @@ try {
   $item->id = 1234;
   $item->title = $_POST['title'];
   $item->description = 'Dispositivo móvil de Tienda e-commerce';
-  $item->picture_url = 'https://ashlamir-mp-commerce-php.herokuapp.com/' . $_POST['img'];
+  $item->picture_url = 'https://ashlamir-mp-commerce-php.herokuapp.com' . ltrim($_POST['img'], $_POST['img'][0]);
   $item->quantity = 1;
   $item->currency_id = 'ARS';
   $item->unit_price = $_POST['price'];
