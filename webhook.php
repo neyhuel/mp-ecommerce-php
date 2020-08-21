@@ -7,9 +7,5 @@ ini_set('display_errors',1);
 //$info = json_encode($json);
 $info = file_get_contents('php://input');
 print_r($info);
-$file = fopen('test.json','w+') or die("File not found");
-fwrite($file, $info);
-fclose($file);
-exit;
-
+error_log(print_r($info));
 ?>
