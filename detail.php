@@ -196,13 +196,14 @@ try {
                                             Cantidad: <?php echo $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <form action="/procesar-pago" method="POST">
-                                      <script
-                                        src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-                                        data-button-label="Pagar la compra"
-                                        data-preference-id="<?php echo $preference->id; ?>">
-                                      </script>
-                                    </form>
+                                    <a class="mercadopago-button" href="<?php echo $preference->init_point; ?>" style="text-decoration: none !important; padding: 1em 1.7142857142857142em;">Pagar la compra</a>
+<!--                                    <form action="/procesar-pago" method="POST">-->
+<!--                                      <script-->
+<!--                                        src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"-->
+<!--                                        data-button-label="Pagar la compra"-->
+<!--                                        data-preference-id="--><?php //echo $preference->id; ?><!--">-->
+<!--                                      </script>-->
+<!--                                    </form>-->
                                 </div>
                             </div>
                         </div>
