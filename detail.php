@@ -63,7 +63,7 @@ try {
 }
 
   echo ('<p style="display: block;position: absolute;z-index: 100;">');
-  echo('https://ashlamir-mp-commerce-php.herokuapp.com/' . $_POST['img'])
+  echo('https://ashlamir-mp-commerce-php.herokuapp.com/' . $_POST['img']);
   echo ("</p>");
 ?>
 
